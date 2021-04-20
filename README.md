@@ -1,12 +1,6 @@
 <h1 align="center">Welcome to rust-webpack-starter 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/LBBO/rust-wasm-starter#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="https://github.com/LBBO/rust-wasm-starter/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
+  <img alt="Version" src="https://img.shields.io/badge/dynamic/json?color=blue&url=https://raw.githubusercontent.com/LBBO/rust-wasm-starter/main/package.json&query=$.version&label=version&cacheSeconds=2592000" />
   <a href="https://github.com/LBBO/rust-wasm-starter/blob/main/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/LBBO/rust-webpack-starter" />
   </a>
