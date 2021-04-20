@@ -7,7 +7,7 @@ const dist = path.resolve(__dirname, 'dist')
 module.exports = {
   mode: 'production',
   entry: {
-    index: './js/index.js',
+    index: './www/index.js',
   },
   output: {
     path: dist,
@@ -23,4 +23,29 @@ module.exports = {
       crateDirectory: __dirname,
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Create `style` from JS strings
+          'style-loader',
+          // Translate CSS into CommonJS
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          // Compile Sass to CSS
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
 }
