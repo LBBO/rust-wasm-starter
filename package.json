@@ -7,7 +7,7 @@
     "start": "rimraf dist pkg && webpack-dev-server --open -d",
     "test": "cargo test && wasm-pack test --headless",
     "prepare": "husky install",
-    "format": "prettier --write ."
+    "format": "cargo fmt && prettier --write ."
   },
   "devDependencies": {
     "@wasm-tool/wasm-pack-plugin": "^1.1.0",
