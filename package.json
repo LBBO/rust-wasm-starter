@@ -1,6 +1,16 @@
 {
   "author": "Michael Kuckuk <mdk@kuckuk.com>",
   "name": "rust-webpack-starter",
+  "description": "Empty webpack project for WASM with Rust, TypeScript, SCSS, prettier and other useful tools.",
+  "homepage": "https://github.com/LBBO/rust-wasm-starter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LBBO/rust-wasm-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LBBO/rust-wasm-starter/issues"
+  },
+  "license": "MIT",
   "version": "0.1.0",
   "scripts": {
     "build": "rimraf dist pkg && webpack",

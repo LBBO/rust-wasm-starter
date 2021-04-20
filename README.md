@@ -1,55 +1,71 @@
-## How to install
+<h1 align="center">Welcome to rust-webpack-starter 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/LBBO/rust-wasm-starter#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/LBBO/rust-wasm-starter/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/LBBO/rust-wasm-starter/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/LBBO/rust-webpack-starter" />
+  </a>
+  <a href="https://twitter.com/LBBO_" target="_blank">
+    <img alt="Twitter: LBBO_" src="https://img.shields.io/twitter/follow/LBBO_.svg?style=social" />
+  </a>
+</p>
+
+> Empty webpack project for WASM with Rust, TypeScript, SCSS, prettier and other
+> useful tools.
+
+Initially, this project was generated with
+[this template (`npm init rust-webpack`)](https://github.com/rustwasm/rust-webpack-template).
+Afterwards, TypeScript and other tools were added for a more pleasant
+development experience.
+
+### ✨ [Demo](http://lbbo.github.io/rust-wasm-starter/)
+
+## Install
 
 ```sh
 npm install
 ```
 
-## How to run in debug mode
+## Usage
 
 ```sh
-# Builds the project and opens it in a new browser tab. Auto-reloads when the project changes.
-npm start
+npm run start
 ```
 
-## How to build in release mode
+## Run tests
 
 ```sh
-# Builds the project and places it into the `dist` folder.
-npm run build
+npm run test
 ```
 
-## How to run unit tests
+## Author
 
-```sh
-# Runs tests in Firefox
-npm test -- --firefox
+👤 **Michael Kuckuk**
 
-# Runs tests in Chrome
-npm test -- --chrome
+- Website: http://michaelkuckuk.com
+- Twitter: [@LBBO\_](https://twitter.com/LBBO_)
+- Github: [@LBBO](https://github.com/LBBO)
 
-# Runs tests in Safari
-npm test -- --safari
-```
+## 🤝 Contributing
 
-## What does each file do?
+Contributions, issues and feature requests are welcome!<br />Feel free to check
+[issues page](https://github.com/LBBO/rust-wasm-starter/issues).
 
-- `Cargo.toml` contains the standard Rust metadata. You put your Rust
-  dependencies in here. You must change this file with your details (name,
-  description, version, authors, categories)
+## Show your support
 
-- `package.json` contains the standard npm metadata. You put your JavaScript
-  dependencies in here. You must change this file with your details (author,
-  name, version)
+Give a ⭐️ if this project helped you!
 
-- `webpack.config.js` contains the Webpack configuration. You shouldn't need to
-  change this, unless you have very special needs.
+## 📝 License
 
-- The `js` folder contains your JavaScript code (`index.js` is used to hook
-  everything into Webpack, you don't need to change it).
+Copyright © 2021 [Michael Kuckuk](https://github.com/LBBO).<br /> This project
+is [MIT](https://github.com/LBBO/rust-wasm-starter/blob/main/LICENSE) licensed.
 
-- The `src` folder contains your Rust code.
+---
 
-- The `static` folder contains any files that you want copied as-is into the
-  final build. It contains an `index.html` file which loads the `index.js` file.
-
-- The `tests` folder contains your Rust unit tests.
+_This README was generated with ❤️ by
+[readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
