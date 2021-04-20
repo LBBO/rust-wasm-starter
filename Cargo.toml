@@ -1,7 +1,7 @@
 # You must change these to your own details.
 [package]
-name = "snake"
-description = "Snake in Rust via WASM"
+name = "rust-webpack-starter"
+description = "Rust webpack starter"
 version = "0.1.0"
 authors = ["Michael Kuckuk <mdk@kuckuk.com>"]
 categories = ["wasm"]
