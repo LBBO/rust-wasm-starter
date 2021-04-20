@@ -7,11 +7,11 @@ const dist = path.resolve(__dirname, 'dist')
 module.exports = {
   mode: 'production',
   entry: {
-    index: './www/index.js',
+    index: './www/index.ts',
   },
   output: {
     path: dist,
-    filename: '[name].js',
+    filename: 'bundle.js',
   },
   devServer: {
     contentBase: dist,
@@ -25,6 +25,11 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: path.resolve(__dirname, 'node_modules'),
+      },
       {
         test: /\.s[ac]ss$/i,
         use: [
@@ -47,5 +52,8 @@ module.exports = {
         ],
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.jsx'],
   },
 }
