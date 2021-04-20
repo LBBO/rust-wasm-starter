@@ -1,8 +1,8 @@
-<h1 align="center">Welcome to rust-webpack-starter 👋</h1>
+<h1 align="center">Welcome to rust-wasm-starter 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/dynamic/json?color=blue&url=https://raw.githubusercontent.com/LBBO/rust-wasm-starter/main/package.json&query=$.version&label=version&cacheSeconds=2592000" />
   <a href="https://github.com/LBBO/rust-wasm-starter/blob/main/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/LBBO/rust-webpack-starter" />
+    <img alt="License: MIT" src="https://img.shields.io/github/license/LBBO/rust-wasm-starter" />
   </a>
   <a href="https://twitter.com/LBBO_" target="_blank">
     <img alt="Twitter: LBBO_" src="https://img.shields.io/twitter/follow/LBBO_.svg?style=social" />

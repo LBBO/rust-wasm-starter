@@ -1,6 +1,6 @@
 # You must change these to your own details.
 [package]
-name = "rust-webpack-starter"
+name = "rust-wasm-starter"
 description = "Rust webpack starter"
 version = "0.1.0"
 authors = ["Michael Kuckuk <mdk@kuckuk.com>"]

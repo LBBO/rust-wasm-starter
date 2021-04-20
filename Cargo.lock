@@ -107,7 +107,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "rust-webpack-starter"
+name = "rust-wasm-starter"
 version = "0.1.0"
 dependencies = [
  "console_error_panic_hook",
