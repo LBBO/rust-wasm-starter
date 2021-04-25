@@ -1,11 +1,12 @@
 const path = require('path')
-const CopyPlugin = require('copy-webpack-plugin')
 const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const dist = path.resolve(__dirname, 'dist')
 
 module.exports = {
   mode: 'production',
+  devtool: 'inline-source-map',
   entry: {
     index: './www/index.ts',
   },
@@ -15,9 +16,13 @@ module.exports = {
   },
   devServer: {
     contentBase: dist,
+    hot: true,
   },
   plugins: [
-    new CopyPlugin([path.resolve(__dirname, 'static')]),
+    new HtmlWebpackPlugin({
+      template: 'static/index.html',
+      hash: true,
+    }),
 
     new WasmPackPlugin({
       crateDirectory: __dirname,
@@ -25,6 +30,13 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -54,6 +66,6 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.json'],
   },
 }
