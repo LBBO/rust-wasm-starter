@@ -1,5 +1,5 @@
+use log::*;
 use wasm_bindgen::prelude::*;
-use web_sys::console;
 
 // When the `wee_alloc` feature is enabled, this uses `wee_alloc` as the global
 // allocator.
@@ -18,7 +18,8 @@ pub fn main_js() -> Result<(), JsValue> {
     console_error_panic_hook::set_once();
 
     // Your code goes here!
-    console::log_1(&JsValue::from_str("Hello world!"));
+    console_log::init_with_level(Level::Debug).expect("error initializing logger");
+    debug!("Rust initialized!");
 
     Ok(())
 }
