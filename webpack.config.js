@@ -6,6 +6,7 @@ const dist = path.resolve(__dirname, 'dist')
 
 module.exports = {
   mode: 'production',
+  devtool: 'inline-source-map',
   entry: {
     index: './www/index.ts',
   },
