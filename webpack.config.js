@@ -1,6 +1,6 @@
 const path = require('path')
-const CopyPlugin = require('copy-webpack-plugin')
 const WasmPackPlugin = require('@wasm-tool/wasm-pack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const dist = path.resolve(__dirname, 'dist')
 
@@ -18,7 +18,10 @@ module.exports = {
     contentBase: dist,
   },
   plugins: [
-    new CopyPlugin([path.resolve(__dirname, 'static')]),
+    new HtmlWebpackPlugin({
+      template: 'static/index.html',
+      hash: true,
+    }),
 
     new WasmPackPlugin({
       crateDirectory: __dirname,
