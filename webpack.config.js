@@ -16,6 +16,7 @@ module.exports = {
   },
   devServer: {
     contentBase: dist,
+    hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -29,6 +30,13 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -58,6 +66,6 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.json'],
   },
 }
